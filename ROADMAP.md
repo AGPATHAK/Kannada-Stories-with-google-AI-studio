@@ -6,6 +6,15 @@
 
 This roadmap is based on the current repository state and adjusted to reflect the most important execution risks: narration sourcing, content schema timing, beginner pronunciation scaffolding, and integration with the broader learning loop.
 
+## Core Principles
+
+- pedagogy is the product; agentic behavior is the control layer around it
+- prefer curated, inspectable lesson structures over opaque generation
+- establish a deterministic baseline before introducing LLM judgment
+- instrument the reading loop before optimizing it
+- evaluate interventions before trusting them in the live learner experience
+- prefer replayable, reviewable systems over clever but hard-to-debug automation
+
 ## Current State
 
 The project already includes:
@@ -41,6 +50,10 @@ Reduce the cost of adding and reviewing stories by moving early to a schema-driv
 
 Use story reading as an input into comprehension practice, vocabulary review, and spaced repetition.
 
+### Goal 4: Prepare for agentic, real-world Kannada input
+
+Extend the app beyond static stories over time so it can surface fresh, high-value reading material such as simplified news headlines and short current-affairs summaries.
+
 ## Guiding Decisions
 
 ### Narration strategy
@@ -62,6 +75,16 @@ Devanagari pronunciation support should be treated as a first-class beginner aid
 ### Comprehension is a core feature
 
 This app is not just a read-along player. Every lesson should eventually include lightweight comprehension checks so “reading and comprehension” is reflected in the actual lesson loop.
+
+### Curated-first, agentic-later
+
+The first job of the product is to make the curated lesson loop strong. Agentic features should be added later, once the schema, glossary behavior, comprehension flow, and retention loop are stable.
+
+When agentic features do arrive, they should complement the curated library rather than replace it. The most promising early use case is fetching recent news headlines or short source texts, simplifying them into learner-friendly Kannada, attaching vocabulary support, and turning them into optional practice material.
+
+### Agent as control system, not content identity
+
+The agentic layer should decide what to fetch, how to simplify it, how to adapt it to the learner, and when to surface it. It should not erase the distinction between trusted curated lessons and dynamic practice material.
 
 ## Phased Roadmap
 
@@ -167,6 +190,61 @@ Suggested deliverables:
 - basic learning analytics stored locally
 - repeat-engagement features for vocabulary retention
 
+### Phase 6A: Build a Deterministic Agentic Content Baseline
+
+Target outcome: add real-world reading content in a bounded, inspectable way before introducing open-ended model judgment.
+
+Workstreams:
+
+- define a source model for dynamic reading content such as headlines, short summaries, and public-interest blurbs
+- build a deterministic ingestion path for source items and cache them locally
+- define a structured transformation contract from source item to learner-facing reading item
+- support manually curated or rule-based simplification as the first baseline
+- map dynamic items into the existing lesson schema with vocabulary, pronunciation support, and comprehension fields
+- log every generated or transformed reading item so it can be reviewed later
+
+Suggested deliverables:
+
+- bounded daily reading feed with inspectable transformation history
+- deterministic or manual-first simplification baseline
+- cached dynamic items represented in the lesson schema
+
+### Phase 6B: Add a Reflective LLM Layer for Simplification and Explanation
+
+Target outcome: introduce LLM assistance as a bounded reflective layer that helps with simplification, explanation, and vocabulary support without becoming an opaque controller.
+
+Workstreams:
+
+- add LLM-assisted simplification for source items after the deterministic baseline exists
+- use the model to propose learner-friendly Kannada rewrites, explanation notes, and vocabulary support
+- keep outputs structured and compatible with the lesson schema
+- preserve source attribution and source links so dynamic content remains traceable
+- keep a reviewable record of source text, simplified text, extracted vocabulary, and comprehension prompts
+- allow manual acceptance, rejection, or editing of generated items while quality is still being established
+
+Suggested deliverables:
+
+- reflective simplification layer with inspectable prompts and outputs
+- agent-generated practice lessons mapped into the existing schema
+- source-aware metadata and quality-review rules
+
+### Phase 6C: Add Adaptive Agentic Reading Recommendations
+
+Target outcome: close the loop so the system can select dynamic reading practice based on learner state rather than just publishing a generic feed.
+
+Workstreams:
+
+- explore adaptive content selection based on the learner’s known vocabulary, review history, and comprehension level
+- rank candidate dynamic items by difficulty, novelty, and overlap with current review goals
+- compare curated and agentic reading outcomes before allowing the adaptive layer to intervene more often
+- keep recommendation logic inspectable and evaluable, even if LLM assistance is used in part of the ranking process
+
+Suggested deliverables:
+
+- optional personalized reading recommendations
+- first adaptive real-world reading loop
+- comparison reports between curated and agentic practice outcomes
+
 ## Supporting Tracks
 
 ### Content Operations
@@ -177,6 +255,7 @@ Suggested deliverables:
 - decide how many new words each lesson should introduce
 - establish a review pass for vocabulary usefulness, duplicate coverage, and comprehension difficulty
 - maintain a simple corpus rationale so story selection stays intentional
+- define quality rules for agentic simplification so dynamic content stays readable and pedagogically useful
 
 ### Quality and Testing
 
@@ -185,6 +264,8 @@ Suggested deliverables:
 - test lesson navigation for first segment, last segment, replay, and narration-backed flows
 - add a pre-release checklist for new lessons
 - validate glossary, pronunciation, and comprehension fields in lesson manifests
+- add quality checks for agentic content, including schema validity, source attribution, and simplification sanity
+- archive agentic outputs so they can be replayed, compared, and evaluated later
 
 ### Distribution and Readiness
 
@@ -219,6 +300,14 @@ Learning effectiveness metrics:
 - vocabulary recall after 48 hours for reviewed words
 - repeat usage of finished lessons and review queues
 
+Agentic expansion metrics:
+
+- number of dynamic reading items accepted after generation or review
+- learner engagement with simplified news or real-world reading items
+- comprehension accuracy on dynamic content versus curated lessons
+- percentage of agentic content that can be reused without manual repair
+- quality delta between deterministic baseline simplification and LLM-assisted simplification
+
 ## Risks and Watchouts
 
 - narration quality and narration workflow can become the largest bottleneck if not decided early
@@ -227,6 +316,8 @@ Learning effectiveness metrics:
 - a larger library without clear corpus criteria may feel random instead of curricular
 - a read-along experience without comprehension checks will undershoot the product’s stated goal
 - story vocabulary may become siloed unless it is designed to flow into the broader review system
+- agentic content can introduce quality drift, simplification errors, or misleading language unless source attribution and review safeguards are built in
+- jumping straight to model-driven dynamic content without a deterministic baseline will make the system harder to debug and harder to trust
 
 ## Suggested Definition of MVP
 
@@ -244,6 +335,7 @@ The project can be considered MVP-ready when it has:
 ## Assumptions
 
 - the product remains focused on curated lessons rather than live AI story generation
+- curated lessons remain the foundation even if agentic reading content is added later
 - the first audience is beginner Kannada learners
 - narration is a core part of the intended experience
 - AI TTS is an acceptable near-term narration baseline
