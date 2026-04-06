@@ -1,4 +1,7 @@
 export type StoryLevel = 'Beginner' | 'Early Reader' | 'Intermediate';
+export type ContentType = 'story' | 'poem' | 'headline' | 'news-brief' | 'dialogue';
+export type SourceType = 'curated' | 'agentic' | 'news' | 'literary';
+export type LessonMode = 'read-along' | 'listening' | 'gloss-first' | 'comprehension';
 
 export interface PronunciationGuide {
   devanagari: string;
@@ -58,6 +61,9 @@ export interface ComprehensionQuestion {
 export interface Story {
   id: string;
   slug: string;
+  contentType: ContentType;
+  sourceType: SourceType;
+  lessonMode: LessonMode;
   title: string;
   sourceTitle: string;
   sourceLabel: string;
@@ -68,6 +74,35 @@ export interface Story {
   themeTags?: string[];
   grammarFocus?: string[];
   segments: StorySegment[];
+  inlineGlossary: InlineGlossaryEntry[];
+  vocabulary: VocabularyWord[];
+  comprehensionQuestions: ComprehensionQuestion[];
+}
+
+export interface StoryManifestSegment {
+  id: string;
+  kannada: string;
+  english: string;
+  baseDurationMs?: number;
+  audioSrc?: string;
+}
+
+export interface StoryManifest {
+  id: string;
+  slug: string;
+  contentType: ContentType;
+  sourceType: SourceType;
+  lessonMode: LessonMode;
+  title: string;
+  sourceTitle: string;
+  sourceLabel: string;
+  level: StoryLevel;
+  estimatedMinutes: number;
+  summary: string;
+  corpus?: string;
+  themeTags?: string[];
+  grammarFocus?: string[];
+  segments: StoryManifestSegment[];
   inlineGlossary: InlineGlossaryEntry[];
   vocabulary: VocabularyWord[];
   comprehensionQuestions: ComprehensionQuestion[];

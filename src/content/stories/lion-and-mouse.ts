@@ -4,6 +4,9 @@ import { buildSegment } from '../story-helpers';
 export const lionAndMouseStory: Story = {
   id: 'lion-and-mouse',
   slug: 'lion-and-mouse',
+  contentType: 'story',
+  sourceType: 'curated',
+  lessonMode: 'read-along',
   title: 'ಸಿಂಹ ಮತ್ತು ಇಲಿ',
   sourceTitle: 'The Lion and the Mouse',
   sourceLabel: 'Aesop • Familiar Story',
