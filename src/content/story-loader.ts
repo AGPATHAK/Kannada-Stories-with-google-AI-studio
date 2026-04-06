@@ -8,7 +8,13 @@ function assert(condition: unknown, message: string): asserts condition {
   }
 }
 
-function validateManifest(manifest: StoryManifest): void {
+export interface ManifestValidationResult {
+  id: string;
+  ok: boolean;
+  errors: string[];
+}
+
+export function validateManifest(manifest: StoryManifest): void {
   assert(manifest.id.trim().length > 0, 'Story manifest is missing id.');
   assert(manifest.slug.trim().length > 0, 'Story manifest is missing slug.');
   assert(manifest.title.trim().length > 0, `Story "${manifest.id}" is missing title.`);
@@ -61,6 +67,23 @@ function validateManifest(manifest: StoryManifest): void {
     assert(!questionIds.has(question.id), `Story "${manifest.id}" question "${question.id}" is duplicated.`);
     questionIds.add(question.id);
   });
+}
+
+export function getManifestValidationResult(manifest: StoryManifest): ManifestValidationResult {
+  try {
+    validateManifest(manifest);
+    return {
+      id: manifest.id,
+      ok: true,
+      errors: [],
+    };
+  } catch (error) {
+    return {
+      id: manifest.id,
+      ok: false,
+      errors: [error instanceof Error ? error.message : 'Unknown validation error.'],
+    };
+  }
 }
 
 export function loadStoryFromManifest(manifest: StoryManifest): Story {
