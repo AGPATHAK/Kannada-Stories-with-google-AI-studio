@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Pause, Play, Volume2 } from 'lucide-react';
-import { Story } from '../types/story';
+import { InlineGlossaryEntry, Story } from '../types/story';
 
 interface StoryPlayerProps {
   story: Story;
@@ -12,11 +12,16 @@ function getSegmentDuration(story: Story, index: number): number {
   return story.segments[index]?.totalDurationMs ?? 0;
 }
 
+function normalizeGlossaryToken(value: string): string {
+  return value.replace(/[.,!?“”"':;()]/g, '').trim();
+}
+
 export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerProps) {
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTimeMs, setCurrentTimeMs] = useState(0);
   const [audioReady, setAudioReady] = useState(false);
+  const [selectedGlossaryEntry, setSelectedGlossaryEntry] = useState<InlineGlossaryEntry | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<number | null>(null);
   const segmentStartRef = useRef<number>(0);
@@ -28,6 +33,19 @@ export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerPr
   const activeTokenIndex = useMemo(() => {
     return currentSegment.tokens.findIndex((token) => currentTimeMs >= token.startMs && currentTimeMs < token.endMs);
   }, [currentSegment.tokens, currentTimeMs]);
+
+  const glossaryLookup = useMemo(() => {
+    const lookup = new Map<string, InlineGlossaryEntry>();
+
+    story.inlineGlossary.forEach((entry) => {
+      const forms = [entry.word, ...entry.surfaceForms];
+      forms.forEach((form) => {
+        lookup.set(normalizeGlossaryToken(form), entry);
+      });
+    });
+
+    return lookup;
+  }, [story.inlineGlossary]);
 
   const handleAdvance = () => {
     if (currentSegmentIndex === story.segments.length - 1) {
@@ -56,11 +74,13 @@ export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerPr
     setCurrentSegmentIndex(0);
     setCurrentTimeMs(0);
     setIsPlaying(false);
+    setSelectedGlossaryEntry(null);
   }, [story]);
 
   useEffect(() => {
     setCurrentTimeMs(0);
     setAudioReady(false);
+    setSelectedGlossaryEntry(null);
 
     if (audioRef.current) {
       audioRef.current.pause();
@@ -126,6 +146,12 @@ export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerPr
     handleAdvance();
   };
 
+  const handleGlossaryOpen = (tokenText: string) => {
+    const normalized = normalizeGlossaryToken(tokenText);
+    const entry = glossaryLookup.get(normalized) ?? null;
+    setSelectedGlossaryEntry(entry);
+  };
+
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-6 sm:px-6 sm:py-8">
       <div className="flex items-center justify-between px-2 pb-4">
@@ -166,21 +192,56 @@ export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerPr
               {currentSegment.tokens.map((token, index) => {
                 const isActive = index === activeTokenIndex;
                 const isPast = index < activeTokenIndex;
+                const glossaryEntry = glossaryLookup.get(normalizeGlossaryToken(token.text));
+                const isGlossarySelected = selectedGlossaryEntry?.id === glossaryEntry?.id;
 
                 return (
-                  <span
+                  <button
                     key={`${currentSegment.id}-${token.text}-${index}`}
+                    type="button"
+                    onClick={() => handleGlossaryOpen(token.text)}
+                    disabled={!glossaryEntry}
                     className={[
                       'rounded-2xl px-3 py-1 transition-all duration-150',
+                      glossaryEntry ? 'cursor-pointer hover:bg-slate-100' : 'cursor-default',
                       isActive ? 'bg-emerald-100 text-emerald-700 scale-[1.03]' : '',
                       isPast ? 'text-slate-400' : '',
+                      isGlossarySelected ? 'bg-amber-100 text-amber-800' : '',
                     ].join(' ')}
                   >
                     {token.text}
-                  </span>
+                  </button>
                 );
               })}
             </div>
+            <p className="mt-4 text-sm leading-7 text-slate-500">
+              Tap a highlighted Kannada word to see a quick meaning when glossary help is available.
+            </p>
+            {selectedGlossaryEntry && (
+              <div className="mt-6 rounded-[1.5rem] border border-emerald-100 bg-emerald-50/80 p-5 text-left shadow-[0_18px_40px_-32px_rgba(21,128,61,0.55)]">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="kannada-text text-2xl font-bold text-emerald-800">{selectedGlossaryEntry.word}</p>
+                    {selectedGlossaryEntry.pronunciationGuide?.devanagari && (
+                      <p className="mt-1 text-sm font-medium text-emerald-700">
+                        {selectedGlossaryEntry.pronunciationGuide.devanagari}
+                      </p>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedGlossaryEntry(null)}
+                    className="rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-emerald-700 transition-colors hover:bg-emerald-100"
+                  >
+                    Close
+                  </button>
+                </div>
+                <p className="mt-4 text-lg font-semibold text-slate-800">{selectedGlossaryEntry.meaning}</p>
+                {selectedGlossaryEntry.note && (
+                  <p className="mt-2 text-sm leading-7 text-slate-600">{selectedGlossaryEntry.note}</p>
+                )}
+              </div>
+            )}
             <p className="mt-6 text-sm leading-7 text-slate-500">
               {currentSegment.audioSrc
                 ? 'This segment will follow your uploaded narration timing.'
