@@ -14,14 +14,14 @@
   "themeTags": ["animals", "kindness", "friendship"],
   "grammarFocus": ["simple past", "requests", "cause and effect"],
   "segments": [
-    { "id": "lion-1", "kannada": "ಒಂದು ದೊಡ್ಡ ಸಿಂಹ ಕಾಡಿನಲ್ಲಿ ಮಲಗಿತ್ತು.", "english": "A big lion was sleeping in the forest.", "baseDurationMs": 520 },
-    { "id": "lion-2", "kannada": "ಚಿಕ್ಕ ಇಲಿ ಅದರ ಮೇಲಿಂದ ಓಡಿತು.", "english": "A small mouse ran across it.", "baseDurationMs": 520 },
-    { "id": "lion-3", "kannada": "ಸಿಂಹ ಎಚ್ಚರವಾಗಿ ಇಲಿಯನ್ನು ಹಿಡಿತು.", "english": "The lion woke up and caught the mouse.", "baseDurationMs": 520 },
-    { "id": "lion-4", "kannada": "ದಯವಿಟ್ಟು ನನ್ನನ್ನು ಬಿಡಿ ಎಂದು ಇಲಿ ಬೇಡಿಕೊಂಡಿತು.", "english": "The mouse begged, “Please let me go.”", "baseDurationMs": 520 },
-    { "id": "lion-5", "kannada": "ಒಂದು ದಿನ ನಾನು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಬಹುದು ಎಂದು ಅದು ಹೇಳಿತು.", "english": "It said that one day it might help the lion.", "baseDurationMs": 520 },
-    { "id": "lion-6", "kannada": "ನಂತರ ಸಿಂಹ ಬಲೆಗೆ ಸಿಕ್ಕಿತು ಮತ್ತು ಗರ್ಜಿಸಿತು.", "english": "Later the lion was trapped in a net and roared.", "baseDurationMs": 540 },
-    { "id": "lion-7", "kannada": "ಇಲಿ ಬಂದು ಕಗ್ಗಂಟನ್ನು ಕಚ್ಚಿ ಸಿಂಹವನ್ನು ಬಿಡಿಸಿತು.", "english": "The mouse came, gnawed the ropes, and freed the lion.", "baseDurationMs": 540 },
-    { "id": "lion-8", "kannada": "ಚಿಕ್ಕವನಾದರೂ ಒಳ್ಳೆಯ ಸ್ನೇಹಿತ ಸಹಾಯ ಮಾಡಬಹುದು.", "english": "Even someone small can be a good friend and help.", "baseDurationMs": 540 }
+    { "id": "lion-1", "kannada": "ಒಂದು ದೊಡ್ಡ ಸಿಂಹ ಕಾಡಿನಲ್ಲಿ ಮಲಗಿತ್ತು.", "english": "A big lion was sleeping in the forest.", "baseDurationMs": 520, "audioSrc": "/audio/lion-and-mouse/segment-01.m4a" },
+    { "id": "lion-2", "kannada": "ಚಿಕ್ಕ ಇಲಿ ಅದರ ಮೇಲಿಂದ ಓಡಿತು.", "english": "A small mouse ran across it.", "baseDurationMs": 520, "audioSrc": "/audio/lion-and-mouse/segment-02.m4a" },
+    { "id": "lion-3", "kannada": "ಸಿಂಹ ಎಚ್ಚರವಾಗಿ ಇಲಿಯನ್ನು ಹಿಡಿತು.", "english": "The lion woke up and caught the mouse.", "baseDurationMs": 520, "audioSrc": "/audio/lion-and-mouse/segment-03.m4a" },
+    { "id": "lion-4", "kannada": "ದಯವಿಟ್ಟು ನನ್ನನ್ನು ಬಿಡಿ ಎಂದು ಇಲಿ ಬೇಡಿಕೊಂಡಿತು.", "english": "The mouse begged, “Please let me go.”", "baseDurationMs": 520, "audioSrc": "/audio/lion-and-mouse/segment-04.m4a" },
+    { "id": "lion-5", "kannada": "ಒಂದು ದಿನ ನಾನು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಬಹುದು ಎಂದು ಅದು ಹೇಳಿತು.", "english": "It said that one day it might help the lion.", "baseDurationMs": 520, "audioSrc": "/audio/lion-and-mouse/segment-05.m4a" },
+    { "id": "lion-6", "kannada": "ನಂತರ ಸಿಂಹ ಬಲೆಗೆ ಸಿಕ್ಕಿತು ಮತ್ತು ಗರ್ಜಿಸಿತು.", "english": "Later the lion was trapped in a net and roared.", "baseDurationMs": 540, "audioSrc": "/audio/lion-and-mouse/segment-06.m4a" },
+    { "id": "lion-7", "kannada": "ಇಲಿ ಬಂದು ಕಗ್ಗಂಟನ್ನು ಕಚ್ಚಿ ಸಿಂಹವನ್ನು ಬಿಡಿಸಿತು.", "english": "The mouse came, gnawed the ropes, and freed the lion.", "baseDurationMs": 540, "audioSrc": "/audio/lion-and-mouse/segment-07.m4a" },
+    { "id": "lion-8", "kannada": "ಚಿಕ್ಕವನಾದರೂ ಒಳ್ಳೆಯ ಸ್ನೇಹಿತ ಸಹಾಯ ಮಾಡಬಹುದು.", "english": "Even someone small can be a good friend and help.", "baseDurationMs": 540, "audioSrc": "/audio/lion-and-mouse/segment-08.m4a" }
   ],
   "inlineGlossary": [
     {

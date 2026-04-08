@@ -14,14 +14,14 @@
   "themeTags": ["animals", "perseverance", "pace"],
   "grammarFocus": ["simple past", "adverbs", "contrast"],
   "segments": [
-    { "id": "hare-1", "kannada": "ಒಂದು ದಿನ ಮೊಲ ಆಮೆಯನ್ನು ನೋಡಿ ನಕ್ಕಿತು.", "english": "One day the hare laughed at the tortoise.", "baseDurationMs": 500 },
-    { "id": "hare-2", "kannada": "ನಾನು ತುಂಬ ಬೇಗ ಓಡುತ್ತೇನೆ ಎಂದು ಮೊಲ ಹೆಮ್ಮೆಪಟ್ಟಿತು.", "english": "The hare boasted that it could run very fast.", "baseDurationMs": 500 },
-    { "id": "hare-3", "kannada": "ಆಮೆ ಶಾಂತವಾಗಿ ನಾವು ಓಟ ಮಾಡೋಣ ಎಂದು ಹೇಳಿತು.", "english": "The tortoise calmly said they should have a race.", "baseDurationMs": 520 },
-    { "id": "hare-4", "kannada": "ಓಟ ಶುರುವಾದ ಕೂಡಲೇ ಮೊಲ ತುಂಬಾ ವೇಗವಾಗಿ ಓಡಿತು.", "english": "As soon as the race began, the hare ran very quickly.", "baseDurationMs": 500 },
-    { "id": "hare-5", "kannada": "ಆದರೆ ಆಮೆ ನಿಧಾನವಾಗಿ ನಿಲ್ಲದೆ ಮುಂದೆ ಸಾಗಿತು.", "english": "But the tortoise kept moving forward slowly without stopping.", "baseDurationMs": 520 },
-    { "id": "hare-6", "kannada": "ಮೊಲ ಮರದ ಕೆಳಗೆ ಸ್ವಲ್ಪ ನಿದ್ದೆ ಮಾಡಿತು.", "english": "The hare took a nap under a tree.", "baseDurationMs": 540 },
-    { "id": "hare-7", "kannada": "ಆಮೆ ಕೊನೆಯಲ್ಲಿ ಗುರಿಯನ್ನು ಮೊದಲು ತಲುಪಿತು.", "english": "In the end, the tortoise reached the finish line first.", "baseDurationMs": 520 },
-    { "id": "hare-8", "kannada": "ನಿಧಾನವಾದರೂ ನಿರಂತರ ಪ್ರಯತ್ನ ಗೆಲ್ಲುತ್ತದೆ.", "english": "Steady effort wins even when it is slow.", "baseDurationMs": 540 }
+    { "id": "hare-1", "kannada": "ಒಂದು ದಿನ ಮೊಲ ಆಮೆಯನ್ನು ನೋಡಿ ನಕ್ಕಿತು.", "english": "One day the hare laughed at the tortoise.", "baseDurationMs": 500, "audioSrc": "/audio/hare-and-tortoise/segment-01.m4a" },
+    { "id": "hare-2", "kannada": "ನಾನು ತುಂಬ ಬೇಗ ಓಡುತ್ತೇನೆ ಎಂದು ಮೊಲ ಹೆಮ್ಮೆಪಟ್ಟಿತು.", "english": "The hare boasted that it could run very fast.", "baseDurationMs": 500, "audioSrc": "/audio/hare-and-tortoise/segment-02.m4a" },
+    { "id": "hare-3", "kannada": "ಆಮೆ ಶಾಂತವಾಗಿ ನಾವು ಓಟ ಮಾಡೋಣ ಎಂದು ಹೇಳಿತು.", "english": "The tortoise calmly said they should have a race.", "baseDurationMs": 520, "audioSrc": "/audio/hare-and-tortoise/segment-03.m4a" },
+    { "id": "hare-4", "kannada": "ಓಟ ಶುರುವಾದ ಕೂಡಲೇ ಮೊಲ ತುಂಬಾ ವೇಗವಾಗಿ ಓಡಿತು.", "english": "As soon as the race began, the hare ran very quickly.", "baseDurationMs": 500, "audioSrc": "/audio/hare-and-tortoise/segment-04.m4a" },
+    { "id": "hare-5", "kannada": "ಆದರೆ ಆಮೆ ನಿಧಾನವಾಗಿ ನಿಲ್ಲದೆ ಮುಂದೆ ಸಾಗಿತು.", "english": "But the tortoise kept moving forward slowly without stopping.", "baseDurationMs": 520, "audioSrc": "/audio/hare-and-tortoise/segment-05.m4a" },
+    { "id": "hare-6", "kannada": "ಮೊಲ ಮರದ ಕೆಳಗೆ ಸ್ವಲ್ಪ ನಿದ್ದೆ ಮಾಡಿತು.", "english": "The hare took a nap under a tree.", "baseDurationMs": 540, "audioSrc": "/audio/hare-and-tortoise/segment-06.m4a" },
+    { "id": "hare-7", "kannada": "ಆಮೆ ಕೊನೆಯಲ್ಲಿ ಗುರಿಯನ್ನು ಮೊದಲು ತಲುಪಿತು.", "english": "In the end, the tortoise reached the finish line first.", "baseDurationMs": 520, "audioSrc": "/audio/hare-and-tortoise/segment-07.m4a" },
+    { "id": "hare-8", "kannada": "ನಿಧಾನವಾದರೂ ನಿರಂತರ ಪ್ರಯತ್ನ ಗೆಲ್ಲುತ್ತದೆ.", "english": "Steady effort wins even when it is slow.", "baseDurationMs": 540, "audioSrc": "/audio/hare-and-tortoise/segment-08.m4a" }
   ],
   "inlineGlossary": [
     {
