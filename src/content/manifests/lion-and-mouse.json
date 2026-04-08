@@ -25,6 +25,51 @@
   ],
   "inlineGlossary": [
     {
+      "id": "lion-glossary-simha",
+      "word": "ಸಿಂಹ",
+      "surfaceForms": ["ಸಿಂಹ"],
+      "meaning": "lion",
+      "pronunciationGuide": { "devanagari": "सिंह", "latin": "simha" },
+      "note": "One of the two main animals in the story.",
+      "reviewKey": "story:lion-and-mouse:simha"
+    },
+    {
+      "id": "lion-glossary-ili",
+      "word": "ಇಲಿ",
+      "surfaceForms": ["ಇಲಿ", "ಇಲಿಯನ್ನು"],
+      "meaning": "mouse",
+      "pronunciationGuide": { "devanagari": "इलि", "latin": "ili" },
+      "note": "The small animal that later helps the lion.",
+      "reviewKey": "story:lion-and-mouse:ili"
+    },
+    {
+      "id": "lion-glossary-malagittu",
+      "word": "ಮಲಗಿತ್ತು",
+      "surfaceForms": ["ಮಲಗಿತ್ತು"],
+      "meaning": "was sleeping",
+      "pronunciationGuide": { "devanagari": "मलगित्तु", "latin": "malagittu" },
+      "note": "Useful for describing a sleeping state.",
+      "reviewKey": "story:lion-and-mouse:malagittu"
+    },
+    {
+      "id": "lion-glossary-kadu",
+      "word": "ಕಾಡು",
+      "surfaceForms": ["ಕಾಡಿನಲ್ಲಿ", "ಕಾಡು"],
+      "meaning": "forest",
+      "pronunciationGuide": { "devanagari": "काडु", "latin": "kaadu" },
+      "note": "A common setting word in stories.",
+      "reviewKey": "story:lion-and-mouse:kaadu"
+    },
+    {
+      "id": "lion-glossary-oditu",
+      "word": "ಓಡಿತು",
+      "surfaceForms": ["ಓಡಿತು"],
+      "meaning": "ran",
+      "pronunciationGuide": { "devanagari": "ओडितु", "latin": "oditu" },
+      "note": "A high-frequency action verb.",
+      "reviewKey": "story:lion-and-mouse:oditu"
+    },
+    {
       "id": "lion-glossary-eccharavaagi",
       "word": "ಎಚ್ಚರವಾಗಿ",
       "surfaceForms": ["ಎಚ್ಚರವಾಗಿ"],
@@ -32,6 +77,15 @@
       "pronunciationGuide": { "devanagari": "एच्चरवागि", "latin": "eccharavaagi" },
       "note": "Useful for moving from sleep to attention.",
       "reviewKey": "story:lion-and-mouse:eccharavaagi"
+    },
+    {
+      "id": "lion-glossary-hiditu",
+      "word": "ಹಿಡಿತು",
+      "surfaceForms": ["ಹಿಡಿತು"],
+      "meaning": "caught",
+      "pronunciationGuide": { "devanagari": "हिडितु", "latin": "hiditu" },
+      "note": "A useful verb for grasping or capturing.",
+      "reviewKey": "story:lion-and-mouse:hiditu"
     },
     {
       "id": "lion-glossary-bedikonditu",
@@ -43,6 +97,33 @@
       "reviewKey": "story:lion-and-mouse:bedikonditu"
     },
     {
+      "id": "lion-glossary-dayavittu",
+      "word": "ದಯವಿಟ್ಟು",
+      "surfaceForms": ["ದಯವಿಟ್ಟು"],
+      "meaning": "please",
+      "pronunciationGuide": { "devanagari": "दयविट्टु", "latin": "dayavittu" },
+      "note": "A useful polite expression for beginners.",
+      "reviewKey": "story:lion-and-mouse:dayavittu"
+    },
+    {
+      "id": "lion-glossary-bidi",
+      "word": "ಬಿಡಿ",
+      "surfaceForms": ["ಬಿಡಿ"],
+      "meaning": "let go / release",
+      "pronunciationGuide": { "devanagari": "बिडि", "latin": "bidi" },
+      "note": "A common imperative form.",
+      "reviewKey": "story:lion-and-mouse:bidi"
+    },
+    {
+      "id": "lion-glossary-sahaaya",
+      "word": "ಸಹಾಯ",
+      "surfaceForms": ["ಸಹಾಯ"],
+      "meaning": "help",
+      "pronunciationGuide": { "devanagari": "सहाय", "latin": "sahaaya" },
+      "note": "A high-value everyday noun and verb base.",
+      "reviewKey": "story:lion-and-mouse:sahaaya"
+    },
+    {
       "id": "lion-glossary-bale",
       "word": "ಬಲೆ",
       "surfaceForms": ["ಬಲೆಗೆ", "ಬಲೆ"],
@@ -52,6 +133,42 @@
       "reviewKey": "story:lion-and-mouse:bale"
     },
     {
+      "id": "lion-glossary-sikkitu",
+      "word": "ಸಿಕ್ಕಿತು",
+      "surfaceForms": ["ಸಿಕ್ಕಿತು"],
+      "meaning": "got caught / was trapped",
+      "pronunciationGuide": { "devanagari": "सिक्कितु", "latin": "sikkitu" },
+      "note": "A useful verb for being caught or found.",
+      "reviewKey": "story:lion-and-mouse:sikkitu"
+    },
+    {
+      "id": "lion-glossary-garjisitu",
+      "word": "ಗರ್ಜಿಸಿತು",
+      "surfaceForms": ["ಗರ್ಜಿಸಿತು"],
+      "meaning": "roared",
+      "pronunciationGuide": { "devanagari": "गर्जिसितु", "latin": "garjisitu" },
+      "note": "A vivid verb often used with lions or thunder.",
+      "reviewKey": "story:lion-and-mouse:garjisitu"
+    },
+    {
+      "id": "lion-glossary-kaggantu",
+      "word": "ಕಗ್ಗಂಟು",
+      "surfaceForms": ["ಕಗ್ಗಂಟನ್ನು", "ಕಗ್ಗಂಟು"],
+      "meaning": "rope knot / binding",
+      "pronunciationGuide": { "devanagari": "कग्गंटु", "latin": "kaggantu" },
+      "note": "Helpful for stories involving tying or trapping.",
+      "reviewKey": "story:lion-and-mouse:kaggantu"
+    },
+    {
+      "id": "lion-glossary-kacchi",
+      "word": "ಕಚ್ಚಿ",
+      "surfaceForms": ["ಕಚ್ಚಿ"],
+      "meaning": "bit / gnawed",
+      "pronunciationGuide": { "devanagari": "कच्चि", "latin": "kacchi" },
+      "note": "A useful verb for biting or chewing through something.",
+      "reviewKey": "story:lion-and-mouse:kacchi"
+    },
+    {
       "id": "lion-glossary-bidisitu",
       "word": "ಬಿಡಿಸಿತು",
       "surfaceForms": ["ಬಿಡಿಸಿತು"],
@@ -59,6 +176,24 @@
       "pronunciationGuide": { "devanagari": "बिडिसितु", "latin": "bidisitu" },
       "note": "A high-value verb for rescue situations.",
       "reviewKey": "story:lion-and-mouse:bidisitu"
+    },
+    {
+      "id": "lion-glossary-snehita",
+      "word": "ಸ್ನೇಹಿತ",
+      "surfaceForms": ["ಸ್ನೇಹಿತ"],
+      "meaning": "friend",
+      "pronunciationGuide": { "devanagari": "स्नेहित", "latin": "snehita" },
+      "note": "A useful relationship word for simple stories.",
+      "reviewKey": "story:lion-and-mouse:snehita"
+    },
+    {
+      "id": "lion-glossary-olleya",
+      "word": "ಒಳ್ಳೆಯ",
+      "surfaceForms": ["ಒಳ್ಳೆಯ"],
+      "meaning": "good",
+      "pronunciationGuide": { "devanagari": "ओळ्ळेय", "latin": "olleya" },
+      "note": "A common adjective for beginner learners.",
+      "reviewKey": "story:lion-and-mouse:olleya"
     }
   ],
   "vocabulary": [

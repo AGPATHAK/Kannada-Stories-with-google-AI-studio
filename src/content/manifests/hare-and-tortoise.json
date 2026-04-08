@@ -25,6 +25,33 @@
   ],
   "inlineGlossary": [
     {
+      "id": "hare-glossary-mola",
+      "word": "ಮೊಲ",
+      "surfaceForms": ["ಮೊಲ"],
+      "meaning": "hare",
+      "pronunciationGuide": { "devanagari": "मोल", "latin": "mola" },
+      "note": "One of the two main animals in the story.",
+      "reviewKey": "story:hare-and-tortoise:mola"
+    },
+    {
+      "id": "hare-glossary-aame",
+      "word": "ಆಮೆ",
+      "surfaceForms": ["ಆಮೆ", "ಆಮೆಯನ್ನು"],
+      "meaning": "tortoise",
+      "pronunciationGuide": { "devanagari": "आमे", "latin": "aame" },
+      "note": "The slow but steady animal in the story.",
+      "reviewKey": "story:hare-and-tortoise:aame"
+    },
+    {
+      "id": "hare-glossary-nakkitu",
+      "word": "ನಕ್ಕಿತು",
+      "surfaceForms": ["ನಕ್ಕಿತು"],
+      "meaning": "laughed",
+      "pronunciationGuide": { "devanagari": "नक्कितु", "latin": "nakkitu" },
+      "note": "Used when someone laughs at another person or animal.",
+      "reviewKey": "story:hare-and-tortoise:nakkitu"
+    },
+    {
       "id": "hare-glossary-hemme",
       "word": "ಹೆಮ್ಮೆಪಟ್ಟಿತು",
       "surfaceForms": ["ಹೆಮ್ಮೆಪಟ್ಟಿತು"],
@@ -32,6 +59,15 @@
       "pronunciationGuide": { "devanagari": "हेम्मेपट्टितु", "latin": "hemme-pattitu" },
       "note": "Used when someone speaks proudly about themselves.",
       "reviewKey": "story:hare-and-tortoise:hemme-pattitu"
+    },
+    {
+      "id": "hare-glossary-oduttene",
+      "word": "ಓಡುತ್ತೇನೆ",
+      "surfaceForms": ["ಓಡುತ್ತೇನೆ", "ಓಡಿತು"],
+      "meaning": "run / ran",
+      "pronunciationGuide": { "devanagari": "ओडुत्तेने", "latin": "oduttene" },
+      "note": "A common verb for running.",
+      "reviewKey": "story:hare-and-tortoise:oduttene"
     },
     {
       "id": "hare-glossary-shanta",
@@ -43,6 +79,24 @@
       "reviewKey": "story:hare-and-tortoise:shaantavaagi"
     },
     {
+      "id": "hare-glossary-ota",
+      "word": "ಓಟ",
+      "surfaceForms": ["ಓಟ"],
+      "meaning": "race",
+      "pronunciationGuide": { "devanagari": "ओट", "latin": "ota" },
+      "note": "The central event of the story.",
+      "reviewKey": "story:hare-and-tortoise:ota"
+    },
+    {
+      "id": "hare-glossary-shuru",
+      "word": "ಶುರುವಾದ",
+      "surfaceForms": ["ಶುರುವಾದ"],
+      "meaning": "began / started",
+      "pronunciationGuide": { "devanagari": "शुरुवाद", "latin": "shuruvaada" },
+      "note": "Used for the start of an action or event.",
+      "reviewKey": "story:hare-and-tortoise:shuruvaada"
+    },
+    {
       "id": "hare-glossary-vegavaagi",
       "word": "ವೇಗವಾಗಿ",
       "surfaceForms": ["ವೇಗವಾಗಿ", "ಬೇಗ"],
@@ -52,6 +106,15 @@
       "reviewKey": "story:hare-and-tortoise:vegavaagi"
     },
     {
+      "id": "hare-glossary-nidhanavaagi",
+      "word": "ನಿಧಾನವಾಗಿ",
+      "surfaceForms": ["ನಿಧಾನವಾಗಿ"],
+      "meaning": "slowly",
+      "pronunciationGuide": { "devanagari": "निधानवागि", "latin": "nidhanavaagi" },
+      "note": "The opposite of moving quickly.",
+      "reviewKey": "story:hare-and-tortoise:nidhanavaagi"
+    },
+    {
       "id": "hare-glossary-nillade",
       "word": "ನಿಲ್ಲದೆ",
       "surfaceForms": ["ನಿಲ್ಲದೆ"],
@@ -59,6 +122,69 @@
       "pronunciationGuide": { "devanagari": "निल्लदे", "latin": "nillade" },
       "note": "A common connector for continuous action.",
       "reviewKey": "story:hare-and-tortoise:nillade"
+    },
+    {
+      "id": "hare-glossary-munde",
+      "word": "ಮುಂದೆ",
+      "surfaceForms": ["ಮುಂದೆ"],
+      "meaning": "forward / ahead",
+      "pronunciationGuide": { "devanagari": "मुंदे", "latin": "munde" },
+      "note": "Useful for direction and progress.",
+      "reviewKey": "story:hare-and-tortoise:munde"
+    },
+    {
+      "id": "hare-glossary-nidde",
+      "word": "ನಿದ್ದೆ",
+      "surfaceForms": ["ನಿದ್ದೆ"],
+      "meaning": "sleep / nap",
+      "pronunciationGuide": { "devanagari": "निद्दे", "latin": "nidde" },
+      "note": "A common everyday noun.",
+      "reviewKey": "story:hare-and-tortoise:nidde"
+    },
+    {
+      "id": "hare-glossary-guri",
+      "word": "ಗುರಿ",
+      "surfaceForms": ["ಗುರಿಯನ್ನು", "ಗುರಿ"],
+      "meaning": "goal / finish line",
+      "pronunciationGuide": { "devanagari": "गुरि", "latin": "guri" },
+      "note": "Used for a target or end point.",
+      "reviewKey": "story:hare-and-tortoise:guri"
+    },
+    {
+      "id": "hare-glossary-talupitu",
+      "word": "ತಲುಪಿತು",
+      "surfaceForms": ["ತಲುಪಿತು"],
+      "meaning": "reached",
+      "pronunciationGuide": { "devanagari": "तलुपितु", "latin": "talupitu" },
+      "note": "A useful completion verb.",
+      "reviewKey": "story:hare-and-tortoise:talupitu"
+    },
+    {
+      "id": "hare-glossary-nirantara",
+      "word": "ನಿರಂತರ",
+      "surfaceForms": ["ನಿರಂತರ"],
+      "meaning": "steady / continuous",
+      "pronunciationGuide": { "devanagari": "निरंतर", "latin": "nirantara" },
+      "note": "Helpful for describing consistency and repetition.",
+      "reviewKey": "story:hare-and-tortoise:nirantara"
+    },
+    {
+      "id": "hare-glossary-prayatna",
+      "word": "ಪ್ರಯತ್ನ",
+      "surfaceForms": ["ಪ್ರಯತ್ನ"],
+      "meaning": "effort",
+      "pronunciationGuide": { "devanagari": "प्रयत्न", "latin": "prayatna" },
+      "note": "A high-value word in many moral or learning contexts.",
+      "reviewKey": "story:hare-and-tortoise:prayatna"
+    },
+    {
+      "id": "hare-glossary-gelluttade",
+      "word": "ಗೆಲ್ಲುತ್ತದೆ",
+      "surfaceForms": ["ಗೆಲ್ಲುತ್ತದೆ"],
+      "meaning": "wins",
+      "pronunciationGuide": { "devanagari": "गेल्लुत्तदे", "latin": "gelluttade" },
+      "note": "Used for victory or success.",
+      "reviewKey": "story:hare-and-tortoise:gelluttade"
     }
   ],
   "vocabulary": [
