@@ -94,6 +94,9 @@ export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerPr
 
   useEffect(() => {
     if (!isPlaying) {
+      if (currentSegment.audioSrc && audioRef.current) {
+        audioRef.current.pause();
+      }
       if (timerRef.current) {
         window.clearInterval(timerRef.current);
         timerRef.current = null;
@@ -144,6 +147,13 @@ export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerPr
   const handleAudioEnded = () => {
     setIsPlaying(false);
     handleAdvance();
+  };
+
+  const handleAudioCanPlay = () => {
+    setAudioReady(true);
+    if (audioRef.current?.paused && currentTimeMs > 0) {
+      audioRef.current.currentTime = currentTimeMs / 1000;
+    }
   };
 
   const handleGlossaryOpen = (tokenText: string) => {
@@ -287,7 +297,7 @@ export default function StoryPlayer({ story, onExit, onComplete }: StoryPlayerPr
         ref={audioRef}
         preload="metadata"
         src={currentSegment.audioSrc}
-        onCanPlay={() => setAudioReady(true)}
+        onCanPlay={handleAudioCanPlay}
         onTimeUpdate={handleAudioTimeUpdate}
         onEnded={handleAudioEnded}
         hidden
