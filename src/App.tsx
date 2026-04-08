@@ -3,11 +3,12 @@ import { GraduationCap, Info, Library } from 'lucide-react';
 import LibraryView from './components/LibraryView';
 import StoryPlayer from './components/StoryPlayer';
 import VocabularyView from './components/VocabularyView';
+import ComprehensionView from './components/ComprehensionView';
 import { stories } from './content/stories';
 import { getCompletedStoryIds, markStoryCompleted } from './lib/progress';
 import { Story } from './types/story';
 
-type AppState = 'library' | 'story' | 'vocabulary';
+type AppState = 'library' | 'story' | 'vocabulary' | 'comprehension';
 
 export default function App() {
   const [state, setState] = useState<AppState>('library');
@@ -96,6 +97,15 @@ export default function App() {
 
         {state === 'vocabulary' && (
           <VocabularyView
+            story={selectedStory}
+            onRestart={() => setState('story')}
+            onContinue={() => setState('comprehension')}
+            onBackToLibrary={() => setState('library')}
+          />
+        )}
+
+        {state === 'comprehension' && (
+          <ComprehensionView
             story={selectedStory}
             onRestart={() => setState('story')}
             onBackToLibrary={() => setState('library')}

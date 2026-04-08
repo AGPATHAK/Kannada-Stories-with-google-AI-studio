@@ -4,10 +4,11 @@ import { Story } from '../types/story';
 interface VocabularyViewProps {
   story: Story;
   onRestart: () => void;
+  onContinue: () => void;
   onBackToLibrary: () => void;
 }
 
-export default function VocabularyView({ story, onRestart, onBackToLibrary }: VocabularyViewProps) {
+export default function VocabularyView({ story, onRestart, onContinue, onBackToLibrary }: VocabularyViewProps) {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 px-6 py-10">
       <div className="rounded-[2rem] border border-white/70 bg-[linear-gradient(135deg,#eefbf3_0%,#ffffff_100%)] p-8 text-center shadow-[0_24px_80px_-48px_rgba(15,23,42,0.35)]">
@@ -62,8 +63,16 @@ export default function VocabularyView({ story, onRestart, onBackToLibrary }: Vo
         </button>
         <button
           type="button"
-          onClick={onBackToLibrary}
+          onClick={onContinue}
           className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-emerald-700"
+        >
+          Continue to Questions
+          <ArrowRight className="h-4 w-4" />
+        </button>
+        <button
+          type="button"
+          onClick={onBackToLibrary}
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 font-semibold text-slate-700 transition-colors hover:border-emerald-200 hover:text-emerald-700"
         >
           Back to Library
           <ArrowRight className="h-4 w-4" />
